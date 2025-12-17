@@ -1,0 +1,492 @@
+/* main-light.css - Professional StudySphere Dashboard Light Styles */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    /* Updated Light Theme Colors */
+    --primary-color: #007bff; /* A clean, professional blue */
+    --primary-dark: #0056b3; /* Darker shade for contrast/hover */
+    --primary-light: #66b3ff;
+    --secondary-color: #28a745; /* Clean green for secondary/success */
+    --accent-color: #dc3545; /* Standard red for danger/accent */
+    --warning-color: #ffc107;
+    --dark-color: #212529; /* Very dark gray for main text */
+    --light-color: #ffffff; /* Pure white background */
+    --gray-color: #6c757d; /* Standard medium gray for secondary text */
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    
+    /* Subtle shadows for a clean look on a light background */
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); 
+    --hover-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: 'Inter', 'Poppins', sans-serif;
+    /* Clean white background instead of a gradient */
+    background: var(--light-color); 
+    background-attachment: fixed;
+    min-height: 100vh;
+    color: var(--dark-color);
+    line-height: 1.6;
+}
+
+/* ===== NAVBAR STYLES ===== */
+.navbar {
+    /* Solid color navbar for clean light design, still professional */
+    background: var(--primary-color) !important; 
+    box-shadow: var(--card-shadow); /* Keep the subtle shadow */
+    padding: 0.8rem 0;
+    backdrop-filter: none; /* Removed blur for a cleaner look */
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    /* Solid white text for brand */
+    color: var(--light-color);
+    background: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: unset;
+    background-clip: unset;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    transform: translateY(-2px);
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    margin: 0 0.2rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    color: white !important;
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.nav-link.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white !important;
+}
+
+.dropdown-menu {
+    background: white;
+    border: 1px solid #f0f0f0; /* Added a light border */
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
+    padding: 0.5rem 0;
+}
+
+.dropdown-item {
+    padding: 0.7rem 1.5rem;
+    font-weight: 500;
+    color: var(--dark-color);
+    transition: all 0.2s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-item:hover {
+    /* Use the primary color for a highlight on hover */
+    background: var(--primary-color);
+    color: white;
+    border-left: 3px solid var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* ===== MAIN CONTENT STYLES ===== */
+main {
+    font-family: 'Inter', sans-serif;
+    min-height: calc(100vh - 200px);
+}
+
+.container {
+    max-width: 1200px;
+}
+
+/* Update text colors for the light body background */
+.text-center h2, .text-center h3 {
+    color: var(--dark-color); /* Use dark color for text on light background */
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: none; /* Removed heavy text shadow */
+}
+
+.text-center p {
+    color: var(--gray-color); /* Use gray for subtext */
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+/* ===== CARD STYLES ===== */
+.card {
+    background: var(--light-color); /* Explicitly white */
+    border: 1px solid #e9ecef; /* Added a very light border for definition */
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Slightly less dramatic hover for professional feel */
+    box-shadow: var(--hover-shadow);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: all 0.3s ease;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.03); /* Subtle zoom */
+}
+
+.card-body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-title {
+    color: var(--primary-dark);
+    font-weight: 700;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card-text {
+    color: var(--gray-color);
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.card-header {
+    /* Solid color for a cleaner header */
+    background: var(--primary-color); 
+    color: white !important;
+    border: none;
+    padding: 1.2rem 1.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.custom-header {
+    /* Solid secondary color for alternative header */
+    background: var(--secondary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 12px 12px 0 0;
+}
+
+/* ===== BUTTON STYLES ===== */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 0.7rem 1.5rem;
+    transition: all 0.3s ease;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.btn-danger {
+    /* Solid color with a slight shadow on hover */
+    background: var(--accent-color); 
+    border: none;
+    color: white;
+}
+
+.btn-danger:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
+    background-color: #c82333; /* Slightly darker on hover */
+}
+
+.btn-outline-info {
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline-info:hover {
+    /* Solid primary color fill on hover */
+    background: var(--primary-color);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+/* ===== FORM STYLES (No significant change needed here) ===== */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-control {
+    border: 1px solid #ced4da; /* Slightly less heavy border */
+    border-radius: 10px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15); /* Primary color focus ring */
+}
+
+.form-check-input:checked {
+    background-color: var(--success-color);
+    border-color: var(--success-color);
+}
+
+/* ===== TABLE STYLES ===== */
+.table {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--card-shadow);
+}
+
+/* Invert the dark table to a light table with a subtle dark header */
+.table-dark {
+    background: var(--light-color); /* Light table background */
+    color: var(--dark-color); /* Dark text color */
+}
+
+.table-dark thead th {
+    background: #e9ecef; /* Light gray header background */
+    color: var(--dark-color); /* Dark text */
+    border: none;
+    padding: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.table-dark tbody td {
+    padding: 1rem;
+    border-color: #e9ecef; /* Light border between cells */
+    vertical-align: middle;
+}
+
+/* ===== ALERT STYLES ===== */
+.alert {
+    border: none;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    font-weight: 500;
+    box-shadow: var(--card-shadow);
+}
+
+/* Solid colors for a cleaner alert look */
+.alert-success {
+    background: var(--success-color);
+    color: white;
+}
+
+.alert-warning {
+    background: var(--warning-color);
+    color: var(--dark-color);
+}
+
+.alert-danger {
+    background: var(--danger-color);
+    color: white;
+}
+
+/* ===== ICON STYLES (No change needed here) ===== */
+.fa {
+    transition: all 0.3s ease;
+    color: var(--gray-color);
+}
+
+.fa-trash:hover {
+    color: var(--danger-color);
+    transform: scale(1.2);
+}
+
+.fa-volume-up:hover {
+    color: var(--success-color);
+    transform: scale(1.2);
+}
+
+/* ===== CONTENT SECTION STYLES (No change needed here) ===== */
+.content-section {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+/* ===== PROFILE STYLES (Updated to light theme colors) ===== */
+.username {
+    font-size: 2.5rem;
+    font-weight: 700;
+    /* Clean gradient for a professional blue/green mix */
+    background: linear-gradient(135deg, var(--primary-dark) 0%, var(--secondary-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 1rem;
+    color: Red;
+}
+
+.user-activity {
+    font-size: 1.2rem;
+    color: var(--gray-color);
+    margin-bottom: 2rem;
+}
+
+/* ===== SEARCH RESULTS STYLES ===== */
+.search-result-card {
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.search-result-card:hover {
+    border-left-color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+/* ===== UTILITY CLASSES (No change needed here) ===== */
+.border-bottom {
+    border-color: #e2e8f0 !important;
+}
+
+.text-muted {
+    color: var(--gray-color) !important;
+}
+
+.legend {
+    color: var(--primary-dark);
+}
+
+/* ===== RESPONSIVE DESIGN (No change needed here) ===== */
+@media (max-width: 768px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .username {
+        font-size: 2rem;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-img-top {
+        height: 150px;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* ===== ANIMATIONS (No change needed here) ===== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card, .content-section, .table {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+/* ===== SCROLLBAR STYLES (Updated to primary color) ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8f9fa; /* Very light track */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary-color); /* Solid primary color thumb */
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark); /* Darker on hover */
+}
+
+/* ===== FOOTER STYLES ===== */
+footer {
+    /* Light footer, or a subtle dark one for contrast. I chose a subtle dark one. */
+    background: #343a40; /* Dark gray */
+    color: white;
+    padding: 3rem 0 2rem;
+    margin-top: 4rem;
+}
+
+/* ===== LOADING STATES (No significant change needed here) ===== */
+.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
