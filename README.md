@@ -144,18 +144,6 @@ StudySphere solves this problem by offering:
 
 ---
 
-## 📷 Screenshots & Diagrams
-
-> ER Diagram, DFDs, UML diagrams, and UI prototypes are included in the project documentation and presentation files.
-
----
-
-## 📄 License
-
-This project is developed for **academic purposes**. You are free to use and modify it for learning and educational use.
-
----
-
 ## 🙌 Acknowledgment
 
 Special thanks to faculty members and mentors for their guidance and support throughout the development of this project.
